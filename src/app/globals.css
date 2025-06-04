@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-dark: #182527;    
+  --color-accent-green: #20CD8D;
+  --color-soft: #CDF3E5; 
+  --color-offwhite: #f4f4f4;
+  --color-dark-blue: #101819;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .bg-dark-custom {
+    background-color: var(--color-dark);
   }
-}
+  .bg-accent-custom {
+    background-color: var(--color-accent-green);
+  }
+  .bg-soft-custom {
+    background-color: var(--color-soft);
+  }
+  .bg-offwhite-custom {
+    background-color: var(--color-offwhite);
+  }
+  .bg-dark-blue-custom {
+    background-color: var(--color-dark-blue);
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .text-dark-custom {
+    color: var(--color-dark);
+  }
+  .text-accent-custom {
+    color: var(--color-accent-green);
+  }
+  .text-soft-custom {
+    color: var(--color-soft);
+  }
+  .text-offwhite-custom {
+    color: var(--color-offwhite);
+  }
+
+  .ring-accent-custom {
+    color: var(--color-accent-green);
+  }
+
+  .border-accent-custom {
+    border-color: var(--color-accent-green);
+  }
 }
