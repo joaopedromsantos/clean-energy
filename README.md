@@ -226,15 +226,13 @@ model User {
 
 ## 📁 Folder Structure & Architecture
 
-Your folder structure follows Next.js 15 and modern best practices.  
+folder structure follows Next.js 15 and modern best practices.
 - **API routes** are in `src/app/api`.
 - **Admin and simulation pages** are separated.
 - **Components, services, schemas, and types** are modularized.
 - **Prisma** and **seed** scripts are in the `prisma` folder.
 - **Middleware** is used for route protection.
 
-**No major architectural issues detected.**  
-If your project grows, consider further splitting components and services by domain.
 
 ---
 
