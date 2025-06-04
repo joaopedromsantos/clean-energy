@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-dark: #182527;    
+  --color-accent-green: #20CD8D;
+  --color-soft: #CDF3E5; 
+  --color-offwhite: #f4f4f4;
+  --color-dark-blue: #101819;
+
+}
+
+@layer utilities {
+  .bg-dark-custom {
+    background-color: var(--color-dark);
+  }
+  .bg-accent-custom {
+    background-color: var(--color-accent-green);
+  }
+  .bg-soft-custom {
+    background-color: var(--color-soft);
+  }
+  .bg-offwhite-custom {
+    background-color: var(--color-offwhite);
+  }
+  .bg-dark-blue-custom {
+    background-color: var(--color-dark-blue);
+  }
+
+  .text-dark-custom {
+    color: var(--color-dark);
+  }
+  .text-accent-custom {
+    color: var(--color-accent-green);
+  }
+  .text-soft-custom {
+    color: var(--color-soft);
+  }
+  .text-offwhite-custom {
+    color: var(--color-offwhite);
+  }
+
+  .ring-accent-custom {
+    color: var(--color-accent-green);
+  }
+
+  .border-accent-custom {
+    border-color: var(--color-accent-green);
+  }
+}
