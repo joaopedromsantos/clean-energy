@@ -17,7 +17,7 @@ export async function DELETE(_request: Request, context: Params) {
     });
 
     return NextResponse.json({ message: 'Lead deleted successfully!' }, { status: 200 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Error deleting lead.' }, { status: 500 });
   }
 }

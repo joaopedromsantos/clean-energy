@@ -1,5 +1,7 @@
 import NextButton from "../../shared/NextButton";
 import { SupplyTypeSelector } from "../step-components/SupplyTypeSelector";
+import { StepConsumptionProps } from "@/types/step-props";
+import type { SupplyType } from "@/types/supply";
 
 const brazilianStates = [
     "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA",
@@ -7,7 +9,7 @@ const brazilianStates = [
     "RS", "RO", "RR", "SC", "SP", "SE", "TO"
 ];
 
-export default function StepConsumption({ register, setValue, watch, errors, onNext }: any) {
+export default function StepConsumption({ register, setValue, watch, errors, onNext }: StepConsumptionProps) {
 
     const supplyType = watch("consumption.supplyType");
 
@@ -59,7 +61,7 @@ export default function StepConsumption({ register, setValue, watch, errors, onN
                 <label className="block text-gray-700 mb-2">Tipo de Fornecimento</label>
                 <SupplyTypeSelector
                     selected={supplyType}
-                    onChange={(type: string) => setValue("consumption.supplyType", type, { shouldValidate: true })}
+                    onChange={(type: SupplyType) => setValue("consumption.supplyType", type, { shouldValidate: true })}
                 />
                 {errors?.supplyType && <p className="text-red-500 text-sm mt-1">{errors.supplyType.message}</p>}
             </div>

@@ -1,7 +1,9 @@
 import NextButton from "@/components/shared/NextButton";
 import BackButton from "../../shared/BackButton";
+import { StepPersonalInfoProps } from "@/types/step-props";
 
-export default function StepPersonalInfo({ register, errors, onBack, onNext }: any) {
+
+export default function StepPersonalInfo({ register, errors, onBack, onNext }: StepPersonalInfoProps) {
 
     return (
         <form onSubmit={onNext}>

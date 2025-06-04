@@ -41,7 +41,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: 'Lead criado ou atualizado com sucesso!' }, { status: 201 });
 
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Erro ao criar ou atualizar lead.' }, { status: 500 });
   }
 }
@@ -69,7 +69,7 @@ export async function GET(request: Request) {
       perPage
     }, { status: 200 });
 
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Erro ao listar leads.' }, { status: 500 });
   }
 }

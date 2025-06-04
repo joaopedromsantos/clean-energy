@@ -20,8 +20,8 @@ export default function AdminLeadsTable() {
       setLeads(data.leads);
       setTotal(data.total);
       setError(null);
-    } catch (err: any) {
-      setError(err.message || 'Failed to fetch leads');
+    } catch {
+      setError('Failed to fetch leads');
     } finally {
       setLoading(false);
     }
@@ -39,7 +39,7 @@ export default function AdminLeadsTable() {
     try {
       await deleteLead(id);
       await fetchLeads();
-    } catch (err) {
+    } catch {
       setError('Failed to delete lead. Please try again.');
     } finally {
       setLoading(false);
