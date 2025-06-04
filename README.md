@@ -227,6 +227,7 @@ model User {
 ## 📁 Folder Structure & Architecture
 
 folder structure follows Next.js 15 and modern best practices.
+
 - **API routes** are in `src/app/api`.
 - **Admin and simulation pages** are separated.
 - **Components, services, schemas, and types** are modularized.
